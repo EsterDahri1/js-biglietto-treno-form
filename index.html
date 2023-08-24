@@ -7,13 +7,23 @@
     <link rel="stylesheet" href="./assets/css/style.css">
 </head>
 <body>
+   <div class="container">
     <h1>🚅 Calcola i prezzo del tuo biglietto in base a tratta ed età 🚅</h1>
     <div id="generateTicket">
-        <input type="text" id="myName" value="Nome">
-        <input type="text" id="myDistance" value="Distanza in km">
-        <button>Genera</button>
+        <input type="text" id="myName" placeholder="Nome">
+        <input type="text" id="myDistance" placeholder="Distanza in km">
+        <div>
+            <select name="age" id="myAge">
+                <option value="minorenne">Minorenne</option>
+                <option value="maggiorenne">Maggiorenne</option>
+                <option value="over65">Over 65</option>
+            </select>
+        </div>
+        <button id="generate" type="submit">Genera</button>
+        <button type="reset">Annulla</button>
 
     </div>
+   </div>
 
     <script type="text/javascript" src="./assets/js/main.js"></script>
 </body>
