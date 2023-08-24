@@ -59,6 +59,10 @@ generateBtn.addEventListener('click', function(){
     fullPrice = 0.21 * userKm;
     // console.log(fullPrice);
 
+    //stampo il nome del passeggero 
+    let passengerName = userName.value;
+    console.log(passengerName);
+    document.querySelector('.passenger').innerHTML = passengerName;
 
     //prezzo scontato del 20%
     let passengerAge = userAge.value;
@@ -67,12 +71,15 @@ generateBtn.addEventListener('click', function(){
         totalMin = fullPrice - (fullPrice * 0.20);
         totalMin = totalMin.toFixed(2);
         console.log(totalMin);
+        document.querySelector('.final-price').innerHTML = `${totalMin}€`;
     }  else if (passengerAge == 'over65') {
         totalOver = fullPrice - (fullPrice * 0.40);
         totalOver = totalOver.toFixed(2);
         console.log(totalOver);
+        document.querySelector('.final-price').innerHTML = `${totalOver}€`;
     } else{
         console.log(fullPrice);
+        document.querySelector('.final-price').innerHTML = `${fullPrice}€`;
     }
 })
 
