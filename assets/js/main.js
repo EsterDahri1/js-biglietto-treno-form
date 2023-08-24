@@ -9,7 +9,7 @@ va applicato uno sconto del 40% per gli over 65.
 
 */ 
 
-//Chiedo nome, km da percorrere, età del passeggero 
+/*//Chiedo nome, km da percorrere, età del passeggero 
 document.getElementById('generate').addEventListener('click', function () {
     const userName = document.getElementById('myName').value;
     console.log(userName);
@@ -41,5 +41,40 @@ document.getElementById('generate').addEventListener('click', function () {
     } else {
         console.log(fullPrice);
     }
+})*/
+
+//Metto in variabile i dati 
+const userName = document.getElementById('myName');
+const userDistance = document.getElementById('myDistance');
+const userAge = document.getElementById('myAge');
+const generateBtn = document.getElementById('generate-btn');
+const resetBtn = document.getElementById('reset-btn');
+
+//Salvo in console
+console.log('👉', userName, userDistance, userAge, generateBtn, resetBtn);
+
+//Prezzo pieno senza esenzioni
+generateBtn.addEventListener('click', function(){
+    const userKm = Number(userDistance.value);
+    fullPrice = 0.21 * userKm;
+    // console.log(fullPrice);
+
+
+    //prezzo scontato del 20%
+    let passengerAge = userAge.value;
+    // console.log('passengerAge');
+    if (passengerAge == 'underage') {
+        totalMin = fullPrice - (fullPrice * 0.20);
+        totalMin = totalMin.toFixed(2);
+        console.log(totalMin);
+    }  else if (passengerAge == 'over65') {
+        totalOver = fullPrice - (fullPrice * 0.40);
+        totalOver = totalOver.toFixed(2);
+        console.log(totalOver);
+    } else{
+        console.log(fullPrice);
+    }
 })
+
+
 
