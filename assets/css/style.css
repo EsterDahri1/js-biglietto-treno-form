@@ -1,0 +1,17 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --tr-primary: #904f40;
+    --tr-brown: #674128;
+    --tr-black: #090605;
+    --tr-violet: #6a4c64;
+    --tr-dark: #29191d;
+}
+
+body{
+    background-color: var(--tr-primary);
+}
