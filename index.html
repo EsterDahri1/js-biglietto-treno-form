@@ -12,14 +12,14 @@
         <div id="generateTicket">
             <div class="row py-20">
                 <div class="col-4 d-flex justify-content-center">
-                    <input type="text" id="myName" placeholder="Nome e cognome">
+                    <input class="p-1" type="text" id="myName" placeholder="Nome e cognome">
                 </div>
                 <div class="col-4 d-flex justify-content-center">
-                    <input type="number" id="myDistance" placeholder="Distanza in km">
+                    <input class="p-1" type="number" id="myDistance" placeholder="Distanza in km">
                 </div>
                 <div class="col-4 d-flex justify-content-center">
                     <div>
-                        <select name="age" id="myAge">
+                        <select class="p-1" name="age" id="myAge">
                             <option value="underage">Minorenne</option>
                             <option value="adult">Maggiorenne</option>
                             <option value="over65">Over 65</option>
@@ -36,16 +36,20 @@
             🎫 Il tuo biglietto 🎫
         </h2>
         <div id="ticket">
-            <h3 class="uppercase">dettaglio passeggeri</h3>
+            <h3 class="uppercase ml-50">dettaglio passeggeri</h3>
             <div class="row py-20">
-                <div class="col-6">
-                    <h3 class="uppercase">nome passeggero</h3>
-                    <div class="passenger"></div>
+                <div class="col-6 d-flex justify-content-center">
+                    <div class="card p-1">
+                        <h3 class="uppercase">nome passeggero</h3>
+                        <div class="passenger text-white"></div>
+                    </div>
                 </div>
                 <div class="col-6">
                     <div class="col">
+                       <div class="card p-1">
                         <h4>Prezzo biglietto</h4>
-                        <div class="final-price"></div>
+                        <div class="final-price text-white"></div>
+                       </div>
                     </div>
                 </div>
             </div>
