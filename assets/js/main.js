@@ -57,6 +57,7 @@ console.log('👉', userName, userDistance, userAge, generateBtn, resetBtn);
 generateBtn.addEventListener('click', function(){
     const userKm = Number(userDistance.value);
     fullPrice = 0.21 * userKm;
+    fullPrice = fullPrice.toFixed(2);
     // console.log(fullPrice);
 
     //stampo il nome del passeggero 

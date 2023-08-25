@@ -13,8 +13,10 @@
     --tr-white: #ffffff;
 }
 
-body{
+body {
     background-color: var(--tr-primary);
+    font-family: 'IBM Plex Sans', sans-serif;
+    font-family: 'Poppins', sans-serif;
 }
 
 .container{
